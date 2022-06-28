@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Map with Weatherly</title>
+
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" />
+<style>
+    
+.sidebar {
+    flex-basis: 10 rem;
+    position: absolute;
+    background-color: rgb(147, 137, 116);;
+    padding: 3rem 5rem 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    border-color: rgb(248, 171, 4);
+    border: 3px solid;
+  }
+#map
+{
+    position: absolute; 
+    height: 90vh;
+    min-height: 200px;
+    width: 99.5vw;
+    min-width: 200px;
+    left: 2px;  
+    border: 3px solid;
+    border-color: grey;
+    margin-bottom: 0;
+    z-index: -2;
+}
+</style>
+<script src="style.css"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <div class="sidebar hidden">
+        <p> City: <span class="city"></span><span>,</span> <span class="country"></span> </p>
+        <p> Temperature: <span class="temp"></span> <span>°C</span> </p>
+        <p> Humidity: <span class="humid"></span> <span>%</span> </p>
+        <p> Visibility: <span class="visib"></span> <span>KM</span></p>
+    </div>
+<div id="map" class="map"></div>
+<script src="script.js"></script>
+
+</body>
+</html>
